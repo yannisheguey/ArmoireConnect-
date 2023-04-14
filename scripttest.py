@@ -35,3 +35,11 @@ def insertion(role):
     return True
 
 insertion("utilisateur")20
+
+except Error as e :
+    print("Error while connecting to MySQL", e)
+
+if connection.is_connected():
+    cursor.close()
+    connection.close()
+    print("MySQL connection is closed")
